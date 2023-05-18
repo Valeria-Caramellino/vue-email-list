@@ -14,22 +14,23 @@
 <body>
     <div id="app">
         <section class="container">
-
             <div class="row">
 
                 <div class="col-10 text-center">
                     <h1 class="m-4">Email Generate:</h1>
                     <div class="d-flex justify-content-center col-12">
-                        <ol class="col-4 text-center">
-                            <template v-for="( oggettoCorrente ,index ) in emails">
-                                <li class="text-start m-2">{{oggettoCorrente}}</li>
-                            </template>
-                        </ol>
+                        <template v-if="emails.length >= 10">
+                            <ol class="col-4 text-center" >
+                                <template v-for="( oggettoCorrente ,index ) in emails">
+                                    <li class="text-start m-2">{{oggettoCorrente}}</li>
+                                </template>
+                            </ol>
+                        </template>
                     </div>
                 </div>
                 
             </div>
-           
+        
         </section>
         
     </div>
